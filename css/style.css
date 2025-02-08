@@ -5,6 +5,10 @@
   font-family: "Arial", sans-serif;
 }
 
+h1{
+  justify-content: center;
+}
+
 nav {
   background-color: #0f0f0f;
   padding: 1rem;
