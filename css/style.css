@@ -5,7 +5,7 @@
   font-family: "Arial", sans-serif;
 }
 
-h1{
+h1 {
   justify-content: center;
 }
 
@@ -33,29 +33,55 @@ nav a:hover {
   color: #4caf50;
 }
 
-.hero {
-  height: 90vh;
+/* Sección de presentación */
+.hero-section {
+  height: 100vh;
+  background-image: url(img/COMPU.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 2rem;
-  background: url(img/—Pngtree—black\ texture\ business\ office\ supplies_1087856.jpg);
-}
-
-.contact-btn {
-  padding: 1rem 2.5rem;
-  background-color: #4caf50;
   color: white;
-  border: none;
-  border-radius: 25px;
-  font-size: 1.1rem;
-  cursor: pointer;
+  padding: 20px;
 }
 
-.contact-btn:hover {
-  background-color: #45a049;
+.hero-content {
+  max-width: 800px;
+}
+
+.name {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #e0e0e0;
+  font-weight: 300;
+}
+
+.cv-button {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: #00cf5d;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.cv-button:hover {
+  background-color: transparent;
+  border-color: #00cf5d;
+  transform: translateY(-3px);
 }
 
 nav li {
@@ -134,7 +160,7 @@ a {
 .contenedor-servicios {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .servicio {
@@ -228,3 +254,44 @@ a {
   color: white;
 }
 
+footer {
+  background-color: black;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-md-12 {
+  width: 100%;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.social-icons li {
+  margin: 0 20px;
+}
+
+.social-icons a {
+  font-size: 30px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #4caf50;
+}

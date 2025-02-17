@@ -3,32 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fontawesome.com/icons/github?f=brands&s=solid"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Portafolio</title>
   </head>
   <body>
-   <h1>Desarrollador Web carlos</h1>
     <nav>
       <ul>
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#acerca">Acerca</a></li>
         <li><a href="#servicios">Servicios</a></li>
         <li><a href="#portafolio">Portafolio</a></li>
-        <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
 
-    <section class="hero">
-      <button class="contact-btn">CONTACTAME</button>
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1 class="name">Carlos Eduardo Pérez</h1>
+        <h2 class="title">Programador Web | Disenador Web</h2>
+        <a href="#contactanos" class="cv-button">Contactanos</a>
+      </div>
     </section>
 
-    <section class="habilidades">
+    <section class="habilidades" id="acerca">
       <div class="contenedor">
-        <h2 style="font-size: 2.5rem; text-align: center" id="acerca">
-          Carlos eduardo perez
-        </h2>
-        <br />
-        <h3 style="text-align: center">Estudiante de Programacion FullStack</h3>
+        <h2 style="text-align: center">Estudiante de Programacion FullStack</h2>
+        <br /><br />
         <div class="fila">
           <div class="columna">
             <h1 style="text-align: center">Descripción sobre mi</h1>
@@ -55,23 +62,23 @@
               <br />
               <h4>HTML5</h4>
               <div class="barra">
-                <div class="progreso" style="width: 90%"></div>
+                <div class="progreso" style="width: 100%"></div>
               </div>
-              <p>90%</p>
+              <p>100%</p>
             </div>
             <div class="habilidad">
               <h4>CSS</h4>
               <div class="barra">
-                <div class="progreso" style="width: 45%"></div>
+                <div class="progreso" style="width: 100%"></div>
               </div>
-              <p>45%</p>
+              <p>100%</p>
             </div>
             <div class="habilidad">
-              <h4>JAVASCRIPT (EN PROCESO)</h4>
+              <h4>JAVASCRIPT</h4>
               <div class="barra">
-                <div class="progreso" style="width: 5%"></div>
+                <div class="progreso" style="width: 100%"></div>
               </div>
-              <p>5%</p>
+              <p>100%</p>
             </div>
           </div>
         </div>
@@ -98,9 +105,8 @@
           <div class="icono">🎨</div>
           <h3>Diseño Web</h3>
           <p>
-            Maqueto tus diseños estáticos y los convierto en
-            increíbles sitios y aplicaciones web responsivas, óptimas y
-            accesibles.
+            Maqueto tus diseños estáticos y los convierto en increíbles sitios y
+            aplicaciones web responsivas, óptimas y accesibles.
           </p>
         </article>
       </div>
@@ -135,22 +141,58 @@
         <!-- Proyecto 2 -->
         <article class="proyecto">
           <img
-            src="css/img/formulario.png"
+            src="css/img/1.jpeg"
             alt="Captura del Proyecto 2"
             class="proyecto-imagen"
           />
           <div class="proyecto-info">
             <div class="proyecto-enlaces">
-              <a href="" target="_blank" class="enlace-github">
-                <i class="fas fa-code-branch"></i>link del enlace de github
+              <a
+                href="https://github.com/Carloseduardo27/Lista-de-tareas"
+                target="_blank"
+                class="enlace-github"
+              >
+                <i class="fas fa-code-branch"></i> link del enlace de github
               </a>
-              <a href="" target="_blank" class="enlace-demo">
-                <i class="fas fa-external-link-alt"></i>link del formulario
+              <a
+                href="https://carloseduardo27.github.io/Lista-de-tareas/"
+                target="_blank"
+                class="enlace-demo"
+              >
+                <i class="fas fa-external-link-alt"></i> link del formulario
               </a>
             </div>
           </div>
         </article>
       </div>
     </section>
+
+    <footer id="contactanos">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="social-icons">
+              <li>
+                <a
+                  href="https://www.linkedin.com/feed/" target="_blank"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/Carloseduardo27"
+                  target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://accounts.google.com/AccountChooser/signinchooser?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&flowName=GlifWebSignIn&flowEntry=AccountChooser&ddm=1" target="_blank"><i class="fas fa-envelope"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
+
