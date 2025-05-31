@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 /* Estilos generales */
 * {
   margin: 0;
@@ -13,7 +21,7 @@ h1 {
 /* Estilos de la barra de navegación */
 nav {
   background-color: #0f0f0f;
-  padding: 1rem;
+  padding: 2rem;
   position: fixed; /* Fija la barra de navegación en la parte superior */
   width: 100%; /* Ocupa todo el ancho */
   top: 0; /* Alinea en la parte superior */
@@ -188,7 +196,9 @@ a { /* Este estilo general de 'a' puede sobrescribir otros enlaces */
 .contenedor-servicios {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: 1fr;
   gap: 1rem;
+
 }
 
 .servicio {
@@ -197,6 +207,7 @@ a { /* Este estilo general de 'a' puede sobrescribir otros enlaces */
   text-align: center;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Añadido sombra para destacar */
   background-color: #ffffff; /* Fondo blanco para los servicios */
+
 }
 
 .icono {
@@ -220,10 +231,6 @@ a { /* Este estilo general de 'a' puede sobrescribir otros enlaces */
   line-height: 1.6;
 }
 
-.separador {
-  border: 0;
-  margin: 2rem 0;
-}
 
 /* Sección de Proyectos */
 .proyectos {
@@ -300,7 +307,7 @@ a { /* Este estilo general de 'a' puede sobrescribir otros enlaces */
 footer {
   background-color: black;
   color: #fff;
-  padding: 40px 20px; /* Aumentado el padding para más espacio */
+  padding: 10px 20px; /* Aumentado el padding para más espacio */
   text-align: center;
 }
 
