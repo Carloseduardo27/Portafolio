@@ -13,7 +13,7 @@ h1 {
 /* Estilos de la barra de navegación */
 nav {
   background-color: #0f0f0f;
-  padding: 1rem;
+  padding: 2rem;
   position: fixed; /* Fija la barra de navegación en la parte superior */
   width: 100%; /* Ocupa todo el ancho */
   top: 0; /* Alinea en la parte superior */
@@ -300,7 +300,7 @@ a { /* Este estilo general de 'a' puede sobrescribir otros enlaces */
 footer {
   background-color: black;
   color: #fff;
-  padding: 40px 20px; /* Aumentado el padding para más espacio */
+  padding: 10px 20px; /* Aumentado el padding para más espacio */
   text-align: center;
 }
 
