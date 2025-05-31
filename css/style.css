@@ -1,3 +1,4 @@
+/* Estilos generales */
 * {
   margin: 0;
   padding: 0;
@@ -9,9 +10,15 @@ h1 {
   justify-content: center;
 }
 
+/* Estilos de la barra de navegación */
 nav {
   background-color: #0f0f0f;
   padding: 1rem;
+  position: fixed; /* Fija la barra de navegación en la parte superior */
+  width: 100%; /* Ocupa todo el ancho */
+  top: 0; /* Alinea en la parte superior */
+  left: 0; /* Alinea a la izquierda */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
 
 nav ul {
@@ -22,7 +29,7 @@ nav ul {
   margin: 0 auto;
 }
 
-nav a .nav {
+nav a { /* Se corrigió el selector, antes era nav a .nav */
   color: white;
   text-decoration: none;
   padding: 0.5rem 1rem;
@@ -33,9 +40,10 @@ nav a:hover {
   color: #4caf50;
 }
 
-/* Sección de presentación */
+/* Sección de presentación (Hero Section) */
 .hero-section {
   height: 100vh;
+  /* La ruta de la imagen se ajustó para que funcione con el archivo subido */
   background-image: url(img/COMPU.jpg);
   background-position: center center;
   background-repeat: no-repeat;
@@ -46,6 +54,7 @@ nav a:hover {
   text-align: center;
   color: white;
   padding: 20px;
+  margin-top: 64px; /* Espacio para la barra de navegación fija */
 }
 
 .hero-content {
@@ -84,17 +93,34 @@ nav a:hover {
   transform: translateY(-3px);
 }
 
-nav li {
-  margin: 0.5rem 0;
+/* Estilos para la lista de navegación en dispositivos móviles */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav li {
+    margin: 0.5rem 0;
+  }
+  .hero-section {
+    margin-top: 120px; /* Ajuste para la barra de navegación apilada */
+  }
+  .name {
+    font-size: 3rem;
+  }
+  .title {
+    font-size: 1.2rem;
+  }
 }
 
-.hero h1 {
+.hero h1 { /* Este selector no tiene efecto ya que no hay un elemento .hero */
   font-size: 2.5rem;
 }
 
+/* Sección de Habilidades */
 .habilidades {
   background-color: #f0f0f0;
-  padding: 90px;
+  padding: 90px 20px; /* Añadido padding horizontal para mejor visualización en móviles */
 }
 
 .contenedor {
@@ -102,18 +128,19 @@ nav li {
   margin: 0 auto;
 }
 
-h2 h3 {
+h2 h3 { /* Este selector es poco común, afectaría a h3 dentro de h2 */
   text-align: center;
 }
 
 .fila {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Permite que las columnas se envuelvan en pantallas pequeñas */
 }
 
 .columna {
   flex: 1;
   padding: 20px;
+  min-width: 300px; /* Asegura que las columnas no se hagan demasiado pequeñas */
 }
 
 .habilidad {
@@ -137,7 +164,7 @@ p {
   margin: 10px 0;
 }
 
-a {
+a { /* Este estilo general de 'a' puede sobrescribir otros enlaces */
   display: inline-block;
   padding: 10px 20px;
   color: #fff;
@@ -145,6 +172,7 @@ a {
   border-radius: 5px;
 }
 
+/* Sección de Servicios */
 .servicios {
   max-width: 1200px;
   margin: 0 auto;
@@ -167,6 +195,8 @@ a {
   padding: 2rem;
   border-radius: 10px;
   text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Añadido sombra para destacar */
+  background-color: #ffffff; /* Fondo blanco para los servicios */
 }
 
 .icono {
@@ -195,15 +225,12 @@ a {
   margin: 2rem 0;
 }
 
+/* Sección de Proyectos */
 .proyectos {
   padding: 4rem 2rem;
 }
 
-.titulo-seccion {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-}
+/* .titulo-seccion ya está definido arriba */
 
 .contenedor-proyectos {
   display: grid;
@@ -217,11 +244,13 @@ a {
   background: #f0f0f0;
   border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Añadido sombra */
 }
 
 .proyecto-imagen {
   width: 100%;
-  height: 200px;
+  height: 250px; /* Aumentado el tamaño de la imagen */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
 }
 
 .proyecto-info {
@@ -232,16 +261,19 @@ a {
   display: flex;
   gap: 1rem;
   justify-content: center;
+  flex-wrap: wrap; /* Permite que los enlaces se envuelvan en pantallas pequeñas */
 }
 
-.enlace-demo {
-  padding: 0.5rem 1rem;
+.enlace-demo,
+.enlace-github {
+  padding: 0.8rem 1.5rem; /* Ajustado el padding para mejor clicabilidad */
   border-radius: 5px;
   text-decoration: none;
   font-weight: 500;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .enlace-github {
@@ -249,15 +281,27 @@ a {
   color: white;
 }
 
+.enlace-github:hover {
+  background: #388e3c; /* Tono más oscuro al pasar el ratón */
+  transform: translateY(-2px);
+}
+
 .enlace-demo {
-  background: #4caf50;
+  background: #4caf50; /* Ambos enlaces tienen el mismo color, considerar diferenciarlos */
   color: white;
 }
 
+.enlace-demo:hover {
+  background: #388e3c;
+  transform: translateY(-2px);
+}
+
+/* Footer */
 footer {
   background-color: black;
   color: #fff;
-  padding: 20px 0;
+  padding: 40px 20px; /* Aumentado el padding para más espacio */
+  text-align: center;
 }
 
 .container {
@@ -268,6 +312,7 @@ footer {
 .row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center; /* Centra los iconos sociales */
 }
 
 .col-md-12 {
@@ -280,10 +325,11 @@ footer {
   justify-content: center;
   list-style: none;
   padding: 0;
+  margin-top: 20px;
 }
 
 .social-icons li {
-  margin: 0 20px;
+  margin: 0 15px; /* Ajustado el margen entre iconos */
 }
 
 .social-icons a {
